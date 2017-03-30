@@ -9,14 +9,14 @@
 ## Create an initialization script
 - Create a shellscript called "init.sh" which is placed within the .dotfiles folder which does the following:
     - Installs oh-my-zsh for your user if the .oh-my-zsh folder does not exist in your home folder (hint: [how to check if folder exists](http://stackoverflow.com/questions/59838/check-if-a-directory-exists-in-a-shell-script))
-    - Symlinks your .vimrc and .zshrc files to your home folder using a relative symlink (hint: use ..)
-    - Symlinks your aliases.zsh to the correct zsh folder using an environment variable (hint: $ZSH_CUSTOM)
-    - Sources the .zshrc file
-    - Bonus question: When you source the .zshrc file in the script above, how do we need to run the script in order for it to work correctly?
-    - The the user that the task has been performed
-- Commit the shellscript and push it to the remote repository
-- Copy the shellscript to this repository under $USER/init.sh
-- Create a pull request to the driftprosjekt repository, where you add your init script
+    - Place symlinks in your home folder which point to files in the .dotfiles folder with the same filenames. For instance $HOME/.vimrc -> .dotfiles/.vimrc. Try to use $HOME when you specify where to put the symlink, and try to use a relative link when you specify the symlink's destination.
+    - Similarily, symlink to .dotfiles/aliases.zsh (if you have one) from the correct zsh folder using an environment variable (hint: $ZSH_CUSTOM). Remember, all files in $ZSH_CUSTOM with the .zsh-suffix are sourced when zsh starts.
+    - Source the .zshrc file
+    - Bonus question: When you source the .zshrc file in the script above, how do we need to run the init script in order for it to work correctly?
+    - Inform the the user that the task has been successfully performed
+- Commit the shellscript to your personal dotfiles repo and push it to the remote repository
+- Copy the shellscript to this repository (which you forked in the beginning of this project), specifically to the folder "$FORKED_REPO/$USER/init.sh"
+- Create a pull request to the driftprosjekt repository with this new init-script
 
 
 ## Update mechanism
