@@ -2,9 +2,9 @@
 
 ## Create your own dotfiles repository
 - Create the folder ".dotfiles" in $HOME and initilize a git repository within it
-- Move all your dotfiles into the folder
+- Copy all your dotfiles into the folder
 - Commit the files
-- Create a GitHub repository named dotfiles, and push your local commit to the remote GitHub repository
+- Create a new, seperate GitHub repository named dotfiles (don't confuse this with this forked repository), and push your local commit to the remote GitHub repository
 
 ## Create an initialization script
 - Create a shellscript called "init.sh" which is placed within the .dotfiles folder which does the following:
