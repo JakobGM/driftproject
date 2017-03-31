@@ -16,6 +16,9 @@ Keep in mind that from now on "dotfiles" will referr to configuration files of s
     - Source the .zshrc file
     - Bonus question: When you source the .zshrc file in the script above, how do we need to run the init script in order for it to work correctly?
     - Inform the the user that the task has been successfully performed
+    - Bonus task 1: Make the script behave correctly if it has already been run previously.
+    - Bonus task 2: Seperate the dotfiles into two folders called 'home' and 'zsh_custom'. Modify the script such that it allows an arbitrary amount of files in each folder, making symlinks from $HOME and $ZSH_CUSTOM to the two respective folders.
+    - Bonus task 3: Print the name of each file as it is symlinked in order to give more feedback to the user.
 - Commit the shellscript to your personal dotfiles repo and push it to the remote repository
 - Copy the shellscript to this repository (which you forked in the beginning of this project), specifically to the folder "$FORKED_REPO/$USER/init.sh"
 - Create a pull request to the driftprosjekt repository with this new init-script
@@ -41,3 +44,10 @@ Keep in mind that from now on "dotfiles" will referr to configuration files of s
     - Return an error message to the user if not 1 or 2 arguments where given
     - ssh into username@hostname, pull your dotfiles repository from github, and run the initialization script
     - Return a success message to the user
+
+## Bonus task for an extra challenge
+- Create a shellscript in the dotfiles repository called "dotadd.sh" which does the following:
+    - Takes in one or more arguments, which are paths to files (start by only supporting absolute file paths)
+    - Moves the files to a folder named 'dotadded' in the dotfiles repository. (Bonus bonus task: check if the file is located in $HOME or $ZSH_CUSTOM, and if so, add it to the correct folder)
+    - Adds new instructions to the initialization script in order to symlink these files. Here the >> operator might come in handy
+    - Runs the initialization script a new(NB: This assumes that the script behaves correctly when it has been partially run before)
