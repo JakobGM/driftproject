@@ -1,4 +1,6 @@
 # Dotfiles
+All files starting with a "dot", i.e. ".", in a Unix file system are considered to be hidden. This means that it will not be shown by most GUI file explorers or by a normal invocation of "ls" (you need to add the -a flag in order to see such files). But in colloquial speech, when we say "dotfiles", we usually do not mean all hidden files, but specifically (hidden) configuration files for Unix programs, such as ".vimrc", ".bashrc", ".zshrc", and ".tmuxrc". We usually want to deploy identical copies of these files to all our workstations and servers. Therefore it is common to have a so called "dotfiles" repository to keep track of your customization files across several different hosts.The version control, deployment, and automatic update mechanism of such files is the task of this project.
+Keep in mind that from now on "dotfiles" will referr to configuration files of specific interest, and *not* all hidden files.
 
 ## Create your own dotfiles repository
 - Create the folder ".dotfiles" in $HOME and initilize a git repository within it
