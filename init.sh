@@ -7,7 +7,10 @@ echo "oh-my-zsh was already installed"
 fi
 ln -s .dotfiles/.vimrc $HOME/.vimrc
 ln -s .dotfiles/.zshrc $HOME/.zshrc
-if [ -f $ZSH_CUSTOM/aliases.zsh ]; then; rm $ZSH_CUSTOM/aliases.zsh;
+if [ -f $ZSH_CUSTOM/aliases.zsh ]
+then
+	rm $ZSH_CUSTOM/aliases.zsh
+fi
 ln -s /$HOME/.dotfiles/zsh_custom/aliases.zsh $ZSH_CUSTOM/aliases.zsh
 source .zshrc
 echo "oh-my-zsh installed. Symlinked .vimrc and .zshrc from home filder, and aliases.zsh to correct zsh folder. Sourced .zshrc" 
