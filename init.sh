@@ -12,5 +12,5 @@ then
 	rm $ZSH_CUSTOM/aliases.zsh
 fi
 ln -s /$HOME/.dotfiles/zsh_custom/aliases.zsh $ZSH_CUSTOM/aliases.zsh
-source .zshrc
+source $HOME/.zshrc
 echo "oh-my-zsh installed. Symlinked .vimrc and .zshrc from home filder, and aliases.zsh to correct zsh folder. Sourced .zshrc" 
