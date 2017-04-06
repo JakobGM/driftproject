@@ -1,6 +1,6 @@
 # Dotfiles
 All files starting with a "dot", i.e. ".", in a Unix file system are considered to be hidden. This means that it will not be shown by most GUI file explorers or by a normal invocation of "ls" (you need to add the -a flag in order to see such files). But in colloquial speech, when we say "dotfiles", we usually do not mean all hidden files, but specifically (hidden) configuration files for Unix programs, such as ".vimrc", ".bashrc", ".zshrc", and ".tmuxrc". We usually want to deploy identical copies of these files to all our workstations and servers. Therefore it is common to have a so called "dotfiles" repository to keep track of your customization files across several different hosts.The version control, deployment, and automatic update mechanism of such files is the task of this project.
-Keep in mind that from now on "dotfiles" will referr to configuration files of specific interest, and *not* all hidden files.
+Keep in mind that from now on "dotfiles" will refer to configuration files of specific interest, and *not* all hidden files.
 
 ## Create your own dotfiles repository
 - Create the folder ".dotfiles" in $HOME and initilize a git repository within it
@@ -16,7 +16,7 @@ Keep in mind that from now on "dotfiles" will referr to configuration files of s
     - Source the .zshrc file
     - Bonus question: When you source the .zshrc file in the script above, how do we need to run the init script in order for it to work correctly?
     - Inform the the user that the task has been successfully performed
-    - Bonus task 1: Make the script behave correctly if it has already been run previously.
+    - Bonus task 1: Make the script behave correctly if it has already been run previously. The if control structure in bash can check for existence of files easily, and you might want to use this. The -f flag checks if there exists a file, the -L flag checks if there is a symlink, and the -e flag checks for both. When symlinking with `ln` you might want to use the `-i` flag, which prompts the user when you try to overwrite an existing symlink, asking if the symlink should be overwritten. Check `man ln` for more information.
     - Bonus task 2: Seperate the dotfiles into two folders called 'home' and 'zsh_custom'. Modify the script such that it allows an arbitrary amount of files in each folder, making symlinks from $HOME and $ZSH_CUSTOM to the two respective folders.
     - Bonus task 3: Print the name of each file as it is symlinked in order to give more feedback to the user.
 - Commit the shellscript to your personal dotfiles repo and push it to the remote repository
