@@ -31,13 +31,14 @@ In the following task, we are going to write a shell script which automates a bo
 - Create a shellscript called "update.sh" besides your init-script which does the following
     - Pulls the newest version of your dotfiles from your GitHub repository
     - Either make your GitHub-repository public, such that the "git pull"-operation doesn't prompt the user for their GitHub password, or alternatively, make use of a GitHub token. The last one is a bit more tricky, for additional documentation take a look [here](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+    - Optional: The script runs the `init.sh` script again in case the new updated dotfiles-repository has added any new files. This will require that you have done the bonus task which makes the `init.sh` script behave correctly when it is run for second time.
 
 ## Learn to use two new tools
 - Learn the basics of how crontab works by googling around. This is a tool which enables you to schedule repeating events on Unix systems.
 - Log into Thorium and use the "wall" command in order to broadcast the message "$USER has finished the crontab task" every 30 seconds to all logged in users on Thorium. Google how to use the wall command.
 
 ## Update your dotfiles automatically
-- Add a cronjob on thorium which runs init.sh every day at 03:00
+- Add a cronjob on thorium which runs `update.sh` every day at 03:00
 - Bonus task: Make this cronjob initiliazation a part of the init-script. How to do this can be found [here](http://stackoverflow.com/questions/878600/how-to-create-a-cron-job-using-bash). Make a pull request for this new change of init.sh to this repository (driftprosjekt)
 
 ## Create a deploy script
