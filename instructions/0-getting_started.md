@@ -43,3 +43,8 @@ Here are some of the concepts you probably need to learn in order to achieve thi
 * Append standard output to a file. See the `>> operator`.
 * How to pass along arguments to a shellscript, like `example_program argument1 argument2`. See how [here](https://www.shellscript.sh/variables2.html).
 * How to "spit out" the content from a file. See `cat`.
+
+## Rounding up
+If you know how to make a pull request to a GitHub repo using git, then you should add your implementation of `yatt` to the `solutions/your_username` folder of this repository. If not, come back later and do it when you have learned how to do it.
+
+You can learn how to do this, and much more, by continuing on with [project 1](1-dotfiles.md).

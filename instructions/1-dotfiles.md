@@ -61,3 +61,6 @@ Another tip is to try to rely on work that has already been done for you. This i
     - Moves the files to a folder named 'dotadded' in the dotfiles repository. (Bonus bonus task: check if the file is located in $HOME or $ZSH_CUSTOM, and if so, add it to the correct folder)
     - Adds new instructions to the initialization script in order to symlink these files. Here the >> operator might come in handy
     - Runs the initialization script a new(NB: This assumes that the script behaves correctly when it has been partially run before)
+
+## Rounding up
+You can now carry on to [project 2](2-filehosting.md), where you will learn how to set up a web server and host files from it.
