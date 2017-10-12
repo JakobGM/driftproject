@@ -41,5 +41,5 @@ Here are some of the concepts you probably need to learn in order to achieve thi
 * Printing content to the terminal. See `echo`.
 * Get the current time in terminal. See `date`.
 * Append standard output to a file. See the `>> operator`.
-* Standard in arguments to shell scripts. See `$1`, `$2`, and so on.
+* How to pass along arguments to a shellscript, like `example_program argument1 argument2`. See how [here](https://www.shellscript.sh/variables2.html).
 * How to "spit out" the content from a file. See `cat`.
