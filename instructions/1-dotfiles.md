@@ -1,9 +1,23 @@
 # Dotfiles
-All files starting with a "dot", i.e. ".", in a Unix file system are considered to be hidden. This means that it will not be shown by most GUI file explorers or by a normal invocation of "ls" (you need to add the -a flag in order to see such files). But in colloquial speech, when we say "dotfiles", we usually do not mean all hidden files, but specifically (hidden) configuration files for Unix programs, such as ".vimrc", ".bashrc", ".zshrc", and ".tmuxrc". We usually want to deploy identical copies of these files to all our workstations and servers. Therefore it is common to have a so called "dotfiles" repository to keep track of your customization files across several different hosts.The version control, deployment, and automatic update mechanism of such files is the task of this project.
+All files starting with a "dot", i.e. ".", in a Unix file system are considered to be hidden. This means that they will not be shown by most GUI file explorers (like Finder on MacOS) or by a normal invocation of `ls` in your terminal (you need to add the -a flag in order to see such files).
+
+But in normal speech/writing, when we say "dotfiles", we usually do not mean _all_ hidden files, but specifically (hidden) configuration files for Unix programs, such as ".vimrc", ".bashrc", ".zshrc", and ".tmuxrc". Such files determine the behaviour of their respective programs. The way to change such configuration files is often:
+* You want to change the behaviour of program `xxx`.
+* You open your terminal.
+* You change directory to your home folder: `cd $HOME`.
+* You open/create the file `.xxxrc`: `vim .xxxvimrc`.
+* You add a new line to the document, specifying some configuration, and save the document.
+* The `xxx` program should reflect the change after closing any existing instance of `xxx` and opening it again.
+
+Let's take a look at an example: we would like to show line numbers when we open a file in vim.
+You could do this by issuing the following terminal command: `echo "set number" >> ${HOME}/.vimrc && vim`.
+Try to understand exactly what this command does.
+
+We usually want to deploy identical copies of these files to all our workstations and servers. Therefore it is common to have a so called "dotfiles" repository to keep track of your customization files across several different hosts.The version control, deployment, and automatic update mechanism of such files is the task of this project.
 Keep in mind that from now on "dotfiles" will refer to configuration files of specific interest, and *not* all hidden files.
 
 ## Create your own dotfiles repository
-- Create the folder ".dotfiles" in $HOME and initilize a git repository within it
+- Create the folder ".dotfiles" in `$HOME` and initilize a git repository within it
 - Copy all your dotfiles into the folder
 - Commit the files
 - Create a new, seperate GitHub repository named dotfiles (don't confuse this with this forked repository), and push your local commit to the remote GitHub repository
